@@ -171,14 +171,17 @@
 
       <div class="order-form__field">
           <label class="order-form__label" for="order=text">Тема заявка</label>
-          <input
+          <select
             class="order-form__input"
-            type="text"
-            id="text"
-            name="text"
-            title="Информаиця о вашей заявке"
+            id="order-product"
+            name="product"
             required
           >
+            <option value="" disabled selected>Выберите товар</option>
+            <option value="iPhone 15">Телефон iPhone 15</option>
+            <option value="Lenovo">Ноутбук Lenovo</option>
+            <option value="Холодильник">Холодильник</option>
+          </select>
       </div>
 
       <div class="order-form__field">
