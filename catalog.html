@@ -47,7 +47,7 @@
 
 
     <section class="catalog-layout">
-      <aside class="catalog-filters">
+      <aside class="catalog-filters"></aside>;
         <h2>Фильтры</h2>
 
         <form class="filters-form" action="#" method="get">
@@ -173,5 +173,27 @@
   <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
   </p>
+    <button id="backToTop" title="Наверх">↑</button>
+
+  <script>
+const button = document.getElementById("backToTop");
+
+// Показываем кнопку при прокрутке страницы
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+});
+
+// Плавно прокручиваем страницу наверх
+button.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 </body>
 </html>
