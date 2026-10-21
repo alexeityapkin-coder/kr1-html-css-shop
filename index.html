@@ -12,10 +12,10 @@
   <meta property="og:image" content="https://alexeityapkin-coder.github.io/kr1-html-css-shop/images/preview.jpg">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header";">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
-
+      
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
@@ -67,27 +67,31 @@
 
       <div class="products-grid">
         <article class="product-card">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
+          
+          <h3 class="product-card__title">Телефон iPhone 15</h3>
+          <p class="product-card__description">Отличный телефон от компании Apple</p>
+          <p class="product-card__price">Цена: 100.000 руб.</p>
+          <img src="https://avatars.mds.yandex.net/i?id=8dcf5b6ec3fc4ac57ca6e9674afaf753_l-11918814-images-thumbs&n=13">
           <button class="button product-card__button" type="button" data-product="Товар 1">
             Заказать
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
+          <h3 class="product-card__title">Ноутбук Lenovo</h3>
+          <p class="product-card__description">Ноутбук для работы</p>
+          <p class="product-card__price">Цена: 70.000 руб.</p>
+          <img src="https://avatars.mds.yandex.net/i?id=a6920d291a3d26f9fc2a690d67678e77f33766bc-11936956-images-thumbs&n=13">
           <button class="button product-card__button" type="button" data-product="Товар 2">
             Заказать
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 3000 руб.</p>
+          <h3 class="product-card__title">Холодильник</h3>
+          <p class="product-card__description">Холодильник с морозильной камерой</p>
+          <p class="product-card__price">Цена: 40.000 руб.</p>
+          <img src="https://img.magnific.com/premium-vector/gray-kitchen-refrigerator_998164-451.jpg">
           <button class="button product-card__button" type="button" data-product="Товар 3">
             Заказать
           </button>
@@ -97,11 +101,15 @@
 
 
     <aside class="aside-info">
-        <h2>Информация для студентов</h2>
+        <h2>Часто задаваемые вопросы</h2>
         <p>
-            На следующих практических занятиях этот проект будет расширяться:
-            появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-            БЭМ-структура и адаптивная версия сайта.
+            <em>Как быстро вы доставляете товары?</em> - Максимальный срок доставки 7 дней;
+        </p>
+        <P>
+          <em>А товары у вас оригинальные</em> - Да, в документации к товару есть все подтверждения оригинальности;
+        </P>
+        <p>
+          <em>А можно ли вернуть товар?</em> - Да, вместе с товаром вы получаете гарантийный талон, по которому можно сделать возврат.
         </p>
     </aside>
 
@@ -138,6 +146,52 @@
         >
       </div>
 
+      <div class="order-form__field">
+          <label class="order-form__label" for="order=phone">Телефон:</label>
+          <input
+            class="order-form__input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+7 (999) 000-00-00"
+            pattern="^\+?[\d\s\-\(\)]{10,}$"
+            title="Введите номер телефона (минимум 10 символов, допускаются цифры, пробелы, скобки, дефис)"
+            required
+        >
+      </div>
+
+      <div class="order-form__field">
+          <label class="order-form__label" for="order=text">Тема заявка</label>
+          <input
+            class="order-form__input"
+            type="text"
+            id="text"
+            name="text"
+            title="Информаиця о вашей заявке"
+            required
+          >
+      </div>
+
+      <div class="order-form__field">
+          <label class="order-form__label" for="order=text">Комменатрий</label>
+          <input
+            class="order-form__input"
+            type="text"
+            id="text"
+            name="text"
+            title="Ваш комментарий"
+            required
+          >
+      </div>
+
+      <div class="order-form__field">
+        <label class="consent-label">
+        <input type="checkbox" name="pdn_consent" required aria-required="true">
+          Я согласен на обработку моих персональных данных в соответствии с&nbsp;
+        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a>
+        </label>
+      </div>
+
       <div class="order-form__actions">
         <button class="button" type="submit">
           Отправить заявку
@@ -146,6 +200,9 @@
         <button class="button" id="close-order-dialog" type="button">
           Закрыть
         </button>
+        <button class="button" type="reset">
+          Очистить форму
+        </button>
       </div>
     </form>
   </dialog>
@@ -153,5 +210,28 @@
   <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
   </p>
+
+  <button id="backToTop" title="Наверх">↑</button>
+
+  <script>
+const button = document.getElementById("backToTop");
+
+// Показываем кнопку при прокрутке страницы
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+});
+
+// Плавно прокручиваем страницу наверх
+button.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 </body>
 </html>

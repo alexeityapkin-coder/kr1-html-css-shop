@@ -194,6 +194,28 @@ a:focus-visible {
 /*
   Простое состояние наведения для кнопки.
 */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+}
+
 .button:hover {
   background-color: var(--color-primary-dark);
 }
@@ -268,6 +290,14 @@ a:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
+}
+
+img {
+  width: 50%;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .product-card:hover {
@@ -420,7 +450,7 @@ a:focus-visible {
 .order-dialog {
   width: min(100% - 32px, 560px);
   padding: var(--space-lg);
-  border: none;
+  border: 10px solid #0e6874;
   border-radius: var(--radius-lg);
 }
 
